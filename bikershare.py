@@ -127,7 +127,7 @@ def station_stats(df):
         most_frequent_combination_station=df.groupby(['Start Station','End Station']).size().sort_values(ascending=False)
         s=most_frequent_combination_station['Start Station'].iloc[0]
         e=most_frequent_combination_station['End Station'].iloc[0]
-        print('Most Popular Combination of Start and End Stations: Start: {} End {}'.format(s,e))
+        print('Most Popular Stations for Start and End : Start: {} End {}'.format(s,e))
 
         print("\nThis took %s seconds." % (time.time() - start_time))
         print('-'*40)
