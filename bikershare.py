@@ -127,7 +127,7 @@ def station_stats(df):
         most_frequent_combination_station=df.groupby(['Start Station','End Station']).size().sort_values(ascending=False)
         s=most_frequent_combination_station['Start Station'].iloc[0]
         e=most_frequent_combination_station['End Station'].iloc[0]
-        print('Most Popular Combination of Start and End Stations: Start: {} End {}'.format(s,e))
+        print('Most Popular Stations for Start and End : Start: {} End {}'.format(s,e))
 
         print("\nThis took %s seconds." % (time.time() - start_time))
         print('-'*40)
@@ -145,7 +145,7 @@ def trip_duration_stats(df):
 
         # TO DO: display mean travel time
         mean_travel_time = df['Trip Duration'].mean()
-        print("Mean travel time :", mean_travel_time)
+        print("Avg travel time :", mean_travel_time)
 
 
         print("\nThis took %s seconds." % (time.time() - start_time))
@@ -190,7 +190,7 @@ def display_data(df, current_line):
         if display == 'no':
             return
         else:
-            print("\nI'm sorry, I'm not sure about whether you wanted to see more data. Let's try again.")
+            print("\nsorry, I'm not sure about whether you wanted to see more data or not. Let's try again.")
             return display_data(df, current_line)
 
 
