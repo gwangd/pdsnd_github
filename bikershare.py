@@ -190,7 +190,7 @@ def display_data(df, current_line):
         if display == 'no':
             return
         else:
-            print("\nI'm sorry, I'm not sure about whether you wanted to see more data. Let's try again.")
+            print("\nsorry, I'm not sure about whether you wanted to see more data or not. Let's try again.")
             return display_data(df, current_line)
 
 
